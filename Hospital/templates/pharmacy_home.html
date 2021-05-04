@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medicines</title>
+    <link rel="stylesheet" type="text/css" href={{url_for('static',filename='css/3.css')}}>
+</head>
+<body>
+    <div class="logins">
+        <h1 style="color:#29a329">Medicine</h1>
+        {% with messages = get_flashed_messages() %}
+         {% if messages %}
+               {% for message in messages %}
+                    <h2 style="color:green">{{ message }}</h2>
+               {% endfor %}
+         {% endif %}
+        {% endwith %}
+        <form method="post" action="/pharma_data">
+            <p><label for="medicine_name">Medicine Name</label></p>
+                <p><input type="text" name="medicine_name"  placeholder="Enter medicine name" required></p>
+
+            <p><label for="expiry_date">Expiry Date</label></p>
+                <p><input type="date" name="expiry_date"  placeholder="" required></p>
+
+            <p><label for="manf_date">Manufacturing Date</label></p>
+                <p><input type="date" name="manf_date"  placeholder="Please enter age" required></p>
+
+            <p><label for="availability">Availability</label></p>
+                <select id="availability" name="availability" required>
+                  <option value="YES">YES</option>
+                  <option value="NO">NO</option>
+                </select>
+
+        <p class="submit"><input type="submit" name="commit" value="ADD Medicine"></p>
+        <a href="/medicine_list">VIEW MEDICINE LIST</a>
+        </form>
+      </div>
+</body>
+</html>

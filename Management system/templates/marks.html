@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD MARK</title>
+</head>
+<style>
+        .staff{
+            padding: 100px;
+            position:center;
+            background-color: rgb(146, 216, 178);
+        }
+
+        a {
+          background-color: red;
+          color: white;
+          padding: 12px 20px;
+          text-decoration: none;
+          text-transform: uppercase;
+          align-items: center;
+}
+
+        a:hover{
+           background-color: #555;
+}
+        label{
+        font-size:20px;
+        color: #00008B;
+        }
+          select {
+          width: 10%;
+          padding: 10px 5px;
+          margin: 15px 0;
+          border: 1px solid rgb(10, 7, 5);
+          border-radius: 6px;
+          box-sizing: border-box;
+        }
+
+        h1{
+          text-align: center;
+          font-size: 30px;
+          font-style:inherit;
+          font-weight: bolder;
+          color: crimson;
+
+        }
+        input[type="text"]{
+          text-size-adjust: 30px;
+          width: 100%;
+          padding: 12px 20px;
+          margin: 15px 0;
+          border: 1px solid rgb(10, 7, 5);
+          border-radius: 6px;
+          box-sizing: border-box;
+        }
+        input[type="number"]{
+          text-size-adjust: 30px;
+          width: 100%;
+          padding: 12px 20px;
+          margin: 15px 0;
+          border: 1px solid rgb(136, 124, 120);
+          border-radius: 6px;
+          box-sizing: border-box;
+        }
+        input[type="submit"]{
+          text-size-adjust: 30px;
+          text-decoration: rgb(85, 100, 0);
+          width: 30%;
+          padding: 12px 20px;
+          margin: 15px 0;
+          border: 1px solid rgb(236, 241, 239);
+          border-radius: 6px;
+          color: #ff9900;
+          font-size: 20px;
+          box-sizing: border-box;
+        }
+        input[type="submit"]:hover{
+        background-color:  #c2d6d6;
+        }
+
+        h2{
+          text-align: center;
+          font-size: 30px;
+          font-style:inherit;
+          font-weight: bolder;
+          color: crimson;
+
+
+    </style>
+<body>
+<div class="staff">
+    <h1>
+        Enter the details
+    </h1>
+     <form action="/marks" method="post">
+        <label>Student id:</label>
+        <input type="number" name="id" required placeholder="Enter student id"><br>
+        <label>Student Name:</label>
+        <input type="text" name="st_name" required placeholder="Enter student Name"><br>
+        <label>Subject:</label>
+        <input type="text" name="subject" required placeholder="Enter Subject"><br>
+        <label>Marks:</label>
+        <input type="number" name="marks" required placeholder="Enter marks"><br>
+        <label>Class:</label>
+        <select id="select" name="class" required ><br>
+        <option value ="1">1</option>
+        <option value ="2">2</option>
+        <option value ="3">3</option>
+        <option value ="4">4</option>
+        <option value ="5">5</option>
+        </select><br>
+         <input type="submit" value="Submit" name="commit">
+         <a href ="/">Logout</a>
+</div>
+
+</body>
+</html>

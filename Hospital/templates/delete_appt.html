@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Appointment</title>
+  <link rel="stylesheet" type="text/css" href={{url_for('static',filename='css/1.css')}}>
+</head>
+<body>
+ <form method="post" action="/del_data">
+            <p><label for="pt_id">Enter id to delete</label></p>
+                <p><input type="number" name="pt_id"  placeholder="Please enter patient id" required></p>
+
+            <p class="submit"><input type="submit" name="commit" value="Delete"></p>
+ </form>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>Register</title>
+    <style>
+        .register{
+            padding: 100px;
+            position:center;
+            background-color: rgb(146, 216, 178);
+        }
+        label{
+        font-size:20px;
+        color: #00008B;
+        }
+          select {
+          width: 10%;
+          padding: 10px 5px;
+          margin: 15px 0;
+          border: 1px solid rgb(10, 7, 5);
+          border-radius: 6px;
+          box-sizing: border-box;
+        }
+
+        h1{
+          text-align: center;
+          font-size: 30px;
+          font-style:inherit;
+          font-weight: bolder;
+          color: crimson;
+
+        }
+        input[type="text"]{
+          text-size-adjust: 30px;
+          width: 100%;
+          padding: 12px 20px;
+          margin: 15px 0;
+          border: 1px solid rgb(10, 7, 5);
+          border-radius: 6px;
+          box-sizing: border-box;
+        }
+        input[type="number"]{
+          text-size-adjust: 30px;
+          width: 100%;
+          padding: 12px 20px;
+          margin: 15px 0;
+          border: 1px solid rgb(136, 124, 120);
+          border-radius: 6px;
+          box-sizing: border-box;
+        }
+        input[type="submit"]{
+          text-size-adjust: 30px;
+          text-decoration: rgb(85, 100, 0);
+          width: 30%;
+          padding: 12px 20px;
+          margin: 15px 0;
+          border: 1px solid rgb(236, 241, 239);
+          border-radius: 6px;
+          color: #ff9900;
+          font-size: 20px;
+          box-sizing: border-box;
+        }
+        input[type="submit"]:hover{
+        background-color:  #c2d6d6;
+        }
+        h2{
+          text-align: center;
+          font-size: 30px;
+          font-style:inherit;
+          font-weight: bolder;
+          color: crimson;
+    </style>
+</head>
+<body>
+  <div class="register">
+    <h1>
+        ADD NEW STUDENT
+    </h1>
+    <form action="/register_data" method="post" autocomplete="off">
+
+      <label for ="id">Student ID: </label>
+      <input type = "number" name = "id" placeholder="Enter the id" required>
+
+      <label for ="name">Name: </label>
+      <input type = "text" name = "name" placeholder="Enter the name" required>
+
+      <label for ="class">Class: </label>
+      <select id="select" name="class" required>
+        <option value ="1">1</option>
+        <option value ="2">2</option>
+        <option value ="3">3</option>
+        <option value ="4">4</option>
+        <option value ="5">5</option>
+      </select><br>
+      <input type="submit" value="Add Student">
+    </form>
+   </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update doctor</title>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Appointment</title>
+   <link rel="stylesheet"  type="text/css" href={{url_for('static',filename='css/3.css')}}>
+</head>
+<body>
+<div class="logins">
+    <h1 style="color:#29a329">Update Doctor Detail</h1>
+      {% with messages = get_flashed_messages() %}
+         {% if messages %}
+               {% for message in messages %}
+                    <h1 style="color:green">{{ message }}</h1>
+               {% endfor %}
+         {% endif %}
+        {% endwith %}
+
+      <form method="post" action="/update_dcdata">
+
+        <p><label for="dc_id">Doctor ID</label></p>
+                <p><input type="text" name="dc_id"  placeholder="Please enter doctor ID" required></p>
+
+          <p><label for="dc_name">Doctor Name</label></p>
+                <p><input type="text" name="dc_name"  placeholder="Please enter Name" required></p>
+
+          <p><label for="dc_exp">Experience</label></p>
+                <p><input type="number" name="dc_exp"  placeholder="Please enter experience" required></p>
+
+          <p><label for="speciality">Speciality</label></p>
+                <p><input type="text" name="speciality" placeholder="Please select Speciality" required></p>
+          <p class="submit"><input type="submit" name="commit" value="Update"></p>
+
+         <a href="/edit_doctor">View Doctor Details</a>
+        </form>
+      </div>
+</body>
+</html>
+</body>
+</html>

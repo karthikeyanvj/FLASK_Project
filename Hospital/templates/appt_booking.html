@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment Booking</title>
+    <link rel="stylesheet" type="text/css" href={{url_for('static',filename='css/3.css')}}>
+</head>
+<body>
+    <div class="logins">
+        <h1 style="color:#29a329">Booking</h1>
+        {% with messages = get_flashed_messages() %}
+         {% if messages %}
+               {% for message in messages %}
+                    <h2 style="color:green">{{ message }}</h2>
+               {% endfor %}
+         {% endif %}
+        {% endwith %}
+        <form method="post" action="/appt_data">
+            <p><label for="pt_id">Patient ID</label></p>
+                <p><input type="number" name="pt_id"  placeholder="Please enter your patient id" required></p>
+
+            <p><label for="pt_name">Patient Name</label></p>
+                <p><input type="text" name="pt_name"  placeholder="Please enter name" required></p>
+
+            <p><label for="pt_age">Age</label></p>
+                <p><input type="number" name="pt_age"  placeholder="Please enter age" required></p>
+
+            <p><label for="gender">Gender</label></p>
+                <select id="gender" name="gender" required>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+
+            <p><label for="date">Date of visit</label></p>
+                <p><input type="date" name="date"  placeholder="Please select date" required></p>
+
+            <p><label for="time">Timing</label></p>
+                <p><input type="time" name="time" placeholder="Please select Time" required></p>
+
+            <p><label for="symptoms">Symptoms</label></p>
+                <textarea id="symptoms" name="symptoms" rows="4" cols="50" required></textarea>
+
+        <p class="submit"><input type="submit" name="commit" value="Book Appointment"></p>
+        <a href="/">LOGOUT</a>
+        </form>
+      </div>
+</body>
+</html>

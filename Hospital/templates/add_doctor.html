@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add doctor</title>
+   <link rel="stylesheet"  type="text/css" href={{url_for('static',filename='css/1.css')}}>
+</head>
+<body>
+<body>
+    <div class="logins">
+      {% with messages = get_flashed_messages() %}
+         {% if messages %}
+               {% for message in messages %}
+                    <h1 style="color:green">{{ message }}</h1>
+               {% endfor %}
+         {% endif %}
+        {% endwith %}
+      <h1>Register Doctor</h1>
+        <form method="post" action="/add_doctor_data">
+          <p><input type="text" name="dc_name"  placeholder="Enter Doctor Name" required></p>
+          <p><input type="text" name="dc_exp" placeholder="Enter Doctor Experience" required></p>
+          <p><input type="text" name="dc_speciality" placeholder="Enter Doctor Speciality" required></p>
+          <p style="font-size:20px">Gender:</p>
+              <p><input type="radio" id="male" name="dc_gender" value="male" required></p>
+              <label for="male">Male</label>
+              <p><input type="radio" id="female" name="dc_gender" value="female" required></p>
+              <label for="female">Female</label>
+          <p class="submit"><input type="submit" name="commit" value="Submit"></p>
+            <a href="/">LOGOUT</a>
+        </form>
+      </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Login</title>
+</head>
+<body>
+    <div class="logins">
+        <h1>Welcome</h1>
+        <h1 style="color:#ff0000">
+            {% if error %}
+            {{error}}
+            {% endif %}
+        </h1>
+        <form method="post" action="/student_login_data">
+          <p><input type="text" name="st_id"  placeholder="Enter Your ID" ></p>
+          <p><input type="text" name="st_class" placeholder="Enter your class" ></p>
+          <p class="submit"><input type="submit" name="commit" value="Show Marks"></p>
+        </form>
+      </div>
+</body>
+</html>

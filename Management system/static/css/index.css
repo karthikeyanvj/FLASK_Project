@@ -1,0 +1,28 @@
+a{
+  background-color: red;
+  color: white;
+  padding: 20px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover{
+  background-color: #555;
+
+}
+
+a:active {
+  background-color: black;
+}
+
+a:visited {
+  background-color: #ccc;
+}
+
+header{
+   text-align: center;
+   font-size: 2em;
+   font-style:inherit;
+   font-weight: bolder;
+   color: crimson;
+ }

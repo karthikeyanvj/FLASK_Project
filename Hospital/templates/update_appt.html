@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Appointment</title>
+   <link rel="stylesheet"  type="text/css" href={{url_for('static',filename='css/3.css')}}>
+</head>
+<body>
+<div class="logins">
+    <h1 style="color:#29a329">Update Here</h1>
+      {% with messages = get_flashed_messages() %}
+         {% if messages %}
+               {% for message in messages %}
+                    <h1 style="color:green">{{ message }}</h1>
+               {% endfor %}
+         {% endif %}
+        {% endwith %}
+
+      <form method="post" action="/update_apptdata">
+          <p><label for="pt_id">Patient ID</label></p>
+                <p><input type="number" name="pt_id"  placeholder="Please enter your patient id" required></p>
+
+          <p><label for="date">Date of visit</label></p>
+                <p><input type="date" name="date"  placeholder="Please select date" required></p>
+
+          <p><label for="time">Timing</label></p>
+                <p><input type="time" name="time" placeholder="Please select Time" required></p>
+
+          <p class="submit"><input type="submit" name="commit" value="Update"></p>
+         <a href="/appointment">View Appointment</a>
+        </form>
+      </div>
+</body>
+</html>

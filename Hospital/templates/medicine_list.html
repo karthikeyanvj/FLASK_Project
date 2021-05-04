@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medicine list</title>
+  <link rel="stylesheet"  type="text/css" href={{url_for('static',filename='css/tables.css')}}>
+</head>
+<body>
+  <h1>Medicine List</h1>
+{% with messages = get_flashed_messages() %}
+         {% if messages %}
+               {% for message in messages %}
+                    <h1 style="color:green">{{ message }}</h1>
+               {% endfor %}
+         {% endif %}
+        {% endwith %}
+  <table class="data-table">
+    <thead>
+        <tr>
+            <th>Medicine ID</th>
+            <th>Medicine Name</th>
+            <th>Expiry Date </th>
+            <th>Manufacturing Date</th>
+            <th>Availabitity</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in data %}
+        <tr>
+            <td>{{row.0}}</td>
+            <td>{{row.1}}</td>
+            <td>{{row.2}}</td>
+            <td>{{row.3}}</td>
+            <td>{{row.4}}</td>
+        </tr>
+    {% endfor %}
+</body>
+</html>

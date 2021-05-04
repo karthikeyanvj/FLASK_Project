@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"  type="text/css" href={{url_for('static',filename='css/2.css')}}>
+</head>
+<body>
+ <div class="content">
+
+     <div class="dropdown">
+          <button class="dropbtn">Manage Doctor</button>
+            <div class="dropdown-content">
+                  <a href="/add_doctor">Add New Doctor</a>
+                  <a href="/edit_doctor">EDIT Doctor</a>
+              </div>
+        </div>
+
+
+     <div class="dropdown">
+          <button class="dropbtn">Manage Appointment</button>
+            <div class="dropdown-content">
+                  <a href="/appointment">View Appointment</a>
+              </div>
+        </div>
+
+     <a href ="/">LOG OUT</a>
+ </div>
+
+</body>
+</html>

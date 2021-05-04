@@ -1,0 +1,117 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  type="text/css" href={{url_for('static',filename='css/index.css')}}>
+    <style>
+        .content {
+          font-weight: bold;
+          position: absolute;
+          bottom: 30%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          width: 100%;
+          padding: 20px;
+          text-align: center;
+    }
+
+        .text{
+          font-weight: bold;
+          color: #00334d;
+          position: absolute;
+          top: 30%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          width: 50%;
+          padding: 20px;
+          text-align: center;
+    }
+          .dropbtn {
+          background-color: #ff3333;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: bold;
+          cursor: pointer;
+        }
+
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #ff3333;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: black;
+          padding: 10px 0px;
+          text-decoration: none;
+          display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #A9A9A9
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+          background-color: #ff8080;
+        }
+    </style>
+</head>
+<body>
+<div class="bg-image"></div>
+
+    <div class="text">
+        <h1>Welcome to Xacaria Hospital</h1><br><br>
+        <h2>Established 1983, Xacaria Hospital has a robust presence across the healthcare
+            ecosystem. From routine wellness & preventive health care to innovative
+            life-saving treatments and diagnostic services, Xacaria Hospital has
+            touched more than 120 million lives from over 120 countries,
+            offering the best clinical outcomes.</h2><br><br>
+    </div>
+
+    <div class="content">
+        <div class="dropdown">
+          <button class="dropbtn">FOR DOCTOR</button>
+              <div class="dropdown-content">
+                  <a href="/dc_login">LOGIN</a>
+                  <a href="/login">PHARMACY</a>
+              </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">FOR PATIENT</button>
+            <div class="dropdown-content">
+                  <a href="new_patient">NEW PATIENT</a>
+                  <a href="patient_login">BOOK AN APPOINTMENT</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">PHARMACY</button>
+            <div class="dropdown-content">
+                  <a href="/pharmacy">PHARMACY DETAILS</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">ADMIN</button>
+            <div class="dropdown-content">
+                  <a href="/admin_page">ADMINISTRATION</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
